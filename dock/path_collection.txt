@@ -1,0 +1,8 @@
+BASE_PATH=/mnt/c/Users/$USERNAME/Desktop/Proj
+VSCODE_PATH=C:\Users\$USERNAME\AppData\Local\Programs\Microsoft VS Code\Code.exe
+ROOT_FOLDER=Proj
+JAVA_HOME=C:\Program Files\Java\jdk-17
+ANDROID_HOME=C:\Users\$USERNAME\Android
+AVD_NAME=pixel_30
+ANDROID_PLATFORM_PATH=C:\Users\$USERNAME\Android\platform-tools
+NOTION_PATH=C:\Users\$USERNAME\AppData\Local\Programs\Notion\Notion.exe
