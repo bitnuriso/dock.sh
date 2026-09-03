@@ -4,7 +4,7 @@
 
 > One command. One workspace. Ready to code.
 
-FastAPI, React, React Native, Next.js, Express, NestJS, Flutter 등 여러 개발 스택의 **프로젝트 생성부터 초기 환경 구성, 실행 준비까지 자동화하는 CLI 도구**입니다.
+Dock.sh는 FastAPI, React, React Native, Next.js, Express, NestJS, Flutter 등 여러 개발 스택의 **프로젝트 생성부터 초기 환경 구성, 실행 준비까지의 과정을 자동화하는 CLI 도구**입니다.
 
 새 프로젝트를 시작할 때마다 반복되던 폴더 생성, 기본 구조 구성, 의존성 준비, 편집기 실행을 줄이고 곧바로 개발을 시작하는 것을 목표로 합니다.
 
@@ -25,7 +25,7 @@ d myai b f
 
 Dock.sh는 명령 한 줄로 프로젝트 종류에 맞는 기본 구조와 실행 환경을 준비합니다.
 
-이미 동일한 프로젝트가 존재하면 새로 생성하거나 덮어쓰지 않고 기존 프로젝트를 그대로 엽니다.
+없는 프로젝트는 빠르게 만들어주고 이미 존재하는 프로젝트는 빠르게 열어드립니다.
 
 ---
 
@@ -54,8 +54,8 @@ Dock.sh는 명령 한 줄로 프로젝트 종류에 맞는 기본 구조와 실�
 * 작업 로그 저장
 * React Native 실기기 / Emulator 실행 보조
 
-> 필요한 것만 빠르게 만들어주고,
-> 이미 있는 것은 건드리지 않습니다.
+> 이미 있는 것은 건드리지 않고
+> 필요한 것만 빠르게 만들어드립니다.
 
 ---
 
@@ -85,13 +85,13 @@ React Native 프로젝트에서는 연결된 실기기를 확인합니다.
 
 ## 🧭 Dock.sh Architecture
 
-Dock.sh는 모든 프레임워크의 초기화 로직을 하나의 거대한 스크립트에 넣지 않습니다.
+Dock.sh에서는 모든 프레임워크의 초기화 로직을 하나의 스크립트로 관리하지 않습니다.
 
 스택별 초기화 로직과 생성 템플릿을 분리해, 각 프레임워크가 자신의 설정을 독립적으로 관리하도록 구성했습니다.
 
 ```text
 dock/
-├── d.sh                     # Main CLI entry point
+├── dock.sh                     # Main CLI entry point
 │
 ├── plugins/                 # Stack initialization plugins
 │   ├── templates/           # Generated project structure templates
@@ -119,11 +119,12 @@ dock/
 │   ├── env_setup.sh
 │   ├── init_venvs.sh
 │   ├── rn_device.sh
+│   ├── base_path.txt
 │   └── path_collection.txt
 │
 ├── scripts/
-│   ├── orca.sh
-│   ├── translate.sh
+│   ├── orca/
+│   ├── translate/
 │   └── intro.sh
 │
 ├── logs/
@@ -132,7 +133,7 @@ dock/
 └── README.md
 ```
 
-이 구조를 통해 새로운 스택을 추가할 때 전체 CLI를 다시 수정하기보다 plugin과 template을 확장하는 방향을 지향합니다.
+새로운 스택을 추가할 때에는 전체 CLI를 다시 수정하기보다 plugin과 template을 통해 확장하는 방향을 추구하고 있습니다.
 
 ---
 
@@ -331,8 +332,8 @@ FastAPI 프로젝트에서는 DB, ORM Model, Repository, Route, Schema, Service 
 
 주요 사용 환경은 다음과 같습니다.
 
-* Ubuntu on WSL2
-* Windows 파일 시스템
+* Ubuntu 22.04 on WSL2
+* Windows 11 파일 시스템
 * VS Code
 * Python / Node 기반 개발 환경
 * React Native Android 개발
@@ -409,11 +410,12 @@ wsl --shutdown
 
 ### 3. 생성보다 개발 시작이 목적입니다.
 
-Dock.sh의 목표는 파일 몇 개를 만들어주는 것이 아니라, 실제 개발을 시작할 수 있는 상태까지 준비하는 것입니다.
+Dock.sh의 목표는 파일 몇 개를 만들어주는 것을 넘어 실제 개발을 시작할 수 있는 상태까지 준비해주는 것입니다.
 
-> 프로젝트는 만들고,
-> 편집기는 열고,
-> 개발 시작 버튼은 눌러드립니다.
+> 프로젝트를 만들고,
+> 편집기를 열고,
+> IDE를 띄워드립니다
+> 개발 시작 버튼만 눌러주세요.
 
 ---
 
