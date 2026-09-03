@@ -1,1 +1,1 @@
-/mnt/c/Users/akasa/Desktop/Proj
+/mnt/c/Users/$env:USERNAME/Desktop/Proj
