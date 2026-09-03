@@ -1,12 +1,12 @@
 # 1. 루트 폴더 사용자 정의(Please change "your_real_root_folder_name" to the name of your actual root folder)
 ROOT_FOLDER="Proj"
-USER_NAME="akasa"
+USER_NAME="$USERNAME"
 
 #rn rma.bat 변수
 AVD_NAME="pixel_30"
 JAVA_HOME="C:\Program Files\Java\jdk-17"
-ANDROID_HOME="C:\Users\akasa\Android"
-ANDROID_PLATFORM_PATH="C:\Users\akasa\Android\platform-tools"
+ANDROID_HOME="C:\Users\$USERNAME\Android"
+ANDROID_PLATFORM_PATH="C:\Users\$USERNAME\Android\platform-tools"
 
 #Notion 사용 여부
 NOTION_USE=YES
