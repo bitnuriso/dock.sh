@@ -91,7 +91,7 @@ Dock.sh는 모든 프레임워크의 초기화 로직을 하나의 거대한 스
 
 ```text
 dock/
-├── d.sh                     # Main CLI entry point
+├── dock.sh                     # Main CLI entry point
 │
 ├── plugins/                 # Stack initialization plugins
 │   ├── templates/           # Generated project structure templates
@@ -119,11 +119,12 @@ dock/
 │   ├── env_setup.sh
 │   ├── init_venvs.sh
 │   ├── rn_device.sh
+│   ├── base_path.txt
 │   └── path_collection.txt
 │
 ├── scripts/
-│   ├── orca.sh
-│   ├── translate.sh
+│   ├── orca/
+│   ├── translate/
 │   └── intro.sh
 │
 ├── logs/
