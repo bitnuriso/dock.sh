@@ -3,7 +3,7 @@
 # .dockenv 실행
 source ~/scripts/.dockenv
 
-exec > >(tee "/mnt/c/Users/akasa/Desktop/Proj/logs/d_$(date +%m%d_%H%M).log") 2>&1
+exec > >(tee "/mnt/c/Users/$env:USERNAME/Desktop/Proj/logs/d_$(date +%m%d_%H%M).log") 2>&1
 
 echo "[DEBUG] 인자 확인 -> PROJECT: $1 / TYPE: $2 / FRAMEWORK: $3"
 PROJECT=$1
